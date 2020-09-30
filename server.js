@@ -1,13 +1,16 @@
+//Requiring npm modules
 const express = require('express')
 const mongodb = require('mongodb')
 const path = require('path')
 const parser = require('body-parser')
 
+//Setting up express server
 const app = express()
 app.set('view engine', 'ejs')
 const new_db = "mongodb://localhost:27017/formdata"
 const MongoClient = mongodb.MongoClient
 
+//Setting up routes
 app.get('/', (req, res) =>{
 res.set({
 		'Access-Control-Allow-Origin' : '*'
